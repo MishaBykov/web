@@ -1,6 +1,6 @@
 <html>
 <head>
-  <!--<meta http-equiv="refresh" content="0; url=index.html">;-->
+  <meta http-equiv="refresh" content="0; url=index.html">;
 </head>
 <?php
 $host = "localhost";
@@ -16,7 +16,6 @@ if ($mysqli->connect_errno != 0)
 $new_id = $result->fetch_array(MYSQLI_ASSOC)['max(id)'] + 1;
 if ($mysqli->connect_errno != 0)
   echo $mysqli->connect_errno;
-
 if ( $_FILES['image']['error'] != 0 ) 
   exit('error download');
 if( !substr($_FILES['image']['type'], 0, 5)=='image' ) 

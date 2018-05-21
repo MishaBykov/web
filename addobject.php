@@ -1,6 +1,6 @@
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=index.html">;
+  <!--<meta http-equiv="refresh" content="0; url=index.html">;-->
 </head>
 <?php
 $host = "localhost";
@@ -18,9 +18,9 @@ if ($mysqli->connect_errno != 0)
   echo $mysqli->connect_errno;
 
 if ( $_FILES['image']['error'] != 0 ) 
-  exit('Ошибка загрузки файла\n');
+  exit('error download');
 if( !substr($_FILES['image']['type'], 0, 5)=='image' ) 
-  exit('Не изображегние');
+  exit('no image');
 $image = file_get_contents( $_FILES['image']['tmp_name'] );
 $image = mysql_escape_string( $image );
 $description = $_REQUEST['desk'];

@@ -24,7 +24,7 @@
 		<div class="wrapper">
 			<ul>
 				<?php
-					$query = "select `id`, `name`, `description`, from my_table";
+					$query = "select `id`, `name`, `description` from my_table";
 					$result = $mysqli->query($query);
 					while($row = $result->fetch_array(MYSQLI_ASSOC)) {
 						echo'	<li class="product-wrapper">

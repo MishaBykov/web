@@ -4,22 +4,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/menu-main.css">
     <title>Сайт</title>
+    </<head>
   <body>
     <ul class="menu-main">
       <li><a href="index.html" class="current" >Главная</a></li>
       <li><a href="gallery.html" >Галерея</a></li>
-      <li><a href="grid.html" >Список элементов</a></li>
+      <li><a href="grid.php" >Список элементов</a></li>
     </ul>
     <div class="forma">
-    <form name="f1" method="get" action="">
-      <input name="link" type="hidden" value="" />
-      Логин: <br />
-      <input name="login" type="text" size="25" maxlength="30" value="" /> <br />
-      Пароль: <br />
-      <input name="pd" type="password" size="25" maxlength="30" value="" /> <br />
-      <input name="remember" type="checkbox" value="yes" /> Запомнить <br />
-      <input type="submit" name="enter" value="Вход" />
-    </form>
+      <form name="addobject" method="post" action="addobject.php" enctype="multipart/form-data" >
+        Имя: <br />
+        <input name="name" type="text" value="" /><br/>
+        Описание: <br />
+        <input name="desk" type="text" size="25" value="" /> <br />
+        Полное описание: <br />
+        <input name="text_full" type="text" size="25" value="" /> <br />
+        <input name="image" type="file" /> <br/>
+        <input type="submit" name="enter" value="Отправить в БД" />
+      </form>
     </div>
   </body>
 </html>

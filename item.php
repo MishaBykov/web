@@ -18,7 +18,7 @@
     <ul class="menu-main">
       <li><a href="..\index.html" >Главная</a></li>
       <li><a href="..\gallery.html" >Галерея</a></li>
-      <li><a href="..\grid.html" >Список элементов</a></li>
+      <li><a href="..\grid.php" >Список элементов</a></li>
     </ul>
     <?php
       $query = "select `id`, `name`, `description`, `text_full` from my_table
